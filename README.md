@@ -95,7 +95,10 @@ encode_save_from_folder(prefs_folder_path, config.modified_path, encoding="utf-8
 - OR
 - XOR
 - OrangeGelDropper
-- 
+
+</details>
+
+<details>
 <summary>Стены</summary>
 
 - PortalWall1
