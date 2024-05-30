@@ -68,10 +68,11 @@ encode_save_from_folder(prefs_folder_path, config.modified_path, encoding="utf-8
 3. Копируем его с заменой в папку с игрой на эмуляторе: `data\data\com.BFGGames.Teleportal2\shared_prefs`
 4. Заходим и радуемся!
 
-## Словарь имён объектов
+# Словарь имён объектов и стен
 <details>
 
-<summary>Расскрой меня!</summary>
+<summary>Объекты</summary>
+
 - Finish
 - Start
 - LampLight
@@ -94,5 +95,28 @@ encode_save_from_folder(prefs_folder_path, config.modified_path, encoding="utf-8
 - OR
 - XOR
 - OrangeGelDropper
+- 
+<summary>Стены</summary>
+
+- PortalWall1
+- PortalWall2
+- PortalWall3
+- PortalWall4
+- PortalWall5
+- Wall1
+- Wall2
+- Wall3
+- Wall4
+- Wall5
+- Wall6
+- Wall7
+- Wall8
+- Wall9
+- PipeHole
+- Water
+- MovePanelWhite
+- MovePanel
+- SecretPanel
+- Emptiness
 
 </details>
