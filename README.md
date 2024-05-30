@@ -8,7 +8,7 @@
 4. В Total Commander идём по пути `data\data\com.BFGGames.Teleportal2\shared_prefs`
 5. Копируем файл `com.BFGGames.Teleportal2.v2.playerprefs.xml` на пк в нашу папку `C:\TP2_Maps`
 6. Создаём файл `config.py` и пишем в него следующий код:
-```
+```python
 game_name = "Teleportal2"
 studio = "BFGGames"
 
@@ -18,7 +18,7 @@ modified_path = fr"C:\TP2_Maps\map_mod\com.{studio}.{game_name}.v2.playerprefs.x
 7. В строку `original_path` пишем путь к файлу `com.BFGGames.Teleportal2.v2.playerprefs.xml`
 8. В строку `modified_path` пишем путь в выходную папку. Например в `C:\TP2_Maps\map_mod`
 9. Создаём файл `map_editor.py` и пишем в него следующий код:
-```
+```python
 from tp2_save_api import *
 import config
 
@@ -39,7 +39,7 @@ encode_save_from_folder(prefs_folder_path, config.modified_path, encoding="utf-8
 - Конвертирует уровень в json файл (чтобы всё работало как надо)
 
 Нихера не понятно? Не ссать, вот пример кода `map_editor.py` с комментариями:
-```
+```python
 from tp2_save_api import *
 import config
 
@@ -62,9 +62,37 @@ encode_save_from_folder(prefs_folder_path, config.modified_path, encoding="utf-8
 ```
 Этот код будет создавать объект `Finish` на координатах 200 200 200 (по x y z)
 
-## Загрузить обратно:
+## Загрузить изменения в игру:
 1. После того как мы написали наш код `map_editor.py` мы его **запускаем**.
 2. В выходной папке (в моём случае это `map_mod`) должен появится наш изменённый файл `com.BFGGames.Teleportal2.v2.playerprefs.xml`
 3. Копируем его с заменой в папку с игрой на эмуляторе: `data\data\com.BFGGames.Teleportal2\shared_prefs`
 4. Заходим и радуемся!
 
+## Словарь имён объектов
+<details>
+
+<summary>Расскрой меня!</summary>
+- Finish
+- Start
+- LampLight
+- Lamp
+- Button1
+- Button2
+- Button3
+- Button4
+- ButtonLever1
+- CubeDropper
+- Door2
+- Stand
+- Catapult
+- 1x1x1
+- 2x2x2
+- 1x1x4
+- Trigger
+- NOT
+- AND
+- OR
+- XOR
+- OrangeGelDropper
+
+</details>
