@@ -31,3 +31,6 @@ encode_save_from_folder(prefs_folder_path, config.modified_path, encoding="utf-8
 ```
 10. Запускаем `map_editor.py` и в папке появятся новые файлы. В конце концов всё должно выглядеть так:
 ![image](https://github.com/Lolip-p/Doc-for-TP2-API/assets/95537683/84c61fc5-f30a-41e9-9b15-0729cfa58f3d)
+
+## Использование:
+- Создаём экземпляр класса Level `level = Level()` и вызваем у него один из трёх методов: `oad_from_string(level_string)`, `load_from_file(path)`, `load_by_level_index(playerprefs_folder, level_pack_index, level_index)`
