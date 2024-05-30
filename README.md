@@ -4,7 +4,7 @@
 ## Установка:
 1. Скачать API и положить в папку, чтобы на пути не было русских символов! Пример: `C:\TP2_Maps`
 2. Скачать эмулятор Android на выбор (Nox, BlueStacks и т.д.), главное получить Root права.
-3. Скачать на эмулятор игру `TP2` (зайти в игру) и `Total Commander`
+3. Скачать на эмулятор игру `TP2` (зайти в игру и создать уровень, сохранить и выйти) и `Total Commander`
 4. В Total Commander идём по пути `data\data\com.BFGGames.Teleportal2\shared_prefs`
 5. Копируем файл `com.BFGGames.Teleportal2.v2.playerprefs.xml` на пк в нашу папку `C:\TP2_Maps`
 6. Создаём файл `config.py` и пишем в него следующий код:
@@ -33,7 +33,7 @@ encode_save_from_folder(prefs_folder_path, config.modified_path, encoding="utf-8
 ![image](https://github.com/Lolip-p/Doc-for-TP2-API/assets/95537683/84c61fc5-f30a-41e9-9b15-0729cfa58f3d)
 
 ## Использование:
-- Создаём экземпляр класса Level `level = Level()` и вызваем у него один из трёх методов: `load_from_string(level_string)`, `load_from_file(path)`, `load_by_level_index(playerprefs_folder, level_pack_index, level_index)`
+- Создаём экземпляр класса Level `level = Level()` и вызываем у него один из трёх методов: `load_from_string(level_string)`, `load_from_file(path)`, `load_by_level_index(playerprefs_folder, level_pack_index, level_index)`
 - Создание объектов или стен: `create_object(name, **kwargs)`, `create_wall(name, **kwargs)`, `name` - берётся из соответствующего словаря, `**kwargs` - это сами атрибуты объекта (позиция, поворот и т.д.)
 - Добавление объектов или стен на уровень: `Level.add_object(self, obj)`, `Level.add_objects(self, objects)`, `Level.add_wall_segment(self, wall_segment)`, `Level.add_wall_segments(self, wall_segments)`
 - `level.convert_to_json_file(prefs_folder_path, 0, 1)` Конвертирует уровень в json файл (чтобы всё работало как надо)
@@ -127,7 +127,7 @@ encode_save_from_folder(prefs_folder_path, config.modified_path, encoding="utf-8
 # Работа с методами:
 
 ---
-### Декодирование и декодирование xml файла
+### Декодирование и кодирование xml файла
 - decode_save_to_folder() - декодирует xml файл в структуру папок вида:
 ```
 PlayerPrefs\
