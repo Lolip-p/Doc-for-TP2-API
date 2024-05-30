@@ -123,3 +123,41 @@ encode_save_from_folder(prefs_folder_path, config.modified_path, encoding="utf-8
 - Emptiness
 
 </details>
+
+# Работа с методами:
+
+---
+### Декодирование и декодирование xml файла
+- decode_save_to_folder() - декодирует xml файл в структуру папок вида:
+```
+PlayerPrefs\
+    Json\
+    Strings\
+    NumericalValues.xml
+```
+- encode_save_from_folder() - декодирует обратно в .xml файл, который воспринимает юнити
+---
+
+---
+### Загрузка карты
+- load_from_string(level_string) - загрузка карты по имени
+- load_from_file(path) - загрузка карты по файлу
+- load_by_level_index(playerprefs_folder, level_pack_index, level_index) - загрузка карты по индексу пака и индексу уровня
+---
+
+---
+### Внесение изменений в карту
+#### Объекты
+- create_object(name, **kwargs) - создаёт объект. `name` - берётся из соответствующего словаря, `**kwargs` - это сами атрибуты объекта (позиция, поворот и т.д.)
+- Level.add_object(obj) - добавляет **один** выбранный объект на карту
+- Level.add_objects([obj, obj, obj...]) - добавляет **несколько** указанных объектов  на карту
+#### Стены
+- А я хер знает как и что тут работает, я до конца не допёр чо вообще за это отвечает, пускай сам автор этого API заполняет это поле...
+---
+
+---
+### Выгрузка карты
+- convert() - конвертирует внесённые изменения в карту
+- convert_to_file(path) - конвертирует внесённые изменения в карту (с выбором пути)
+- convert_to_json_file(playerprefs_folder, level_pack_index, level_index) - конвертирует внесённые изменения в карту по индексу пака и индексу уровня
+---
