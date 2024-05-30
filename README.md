@@ -1,5 +1,5 @@
 # Doc-for-TP2-API
-Это документация к API от https://t.me/vaIerkaaaaaaa для TP2
+Это совместная документация к API (от https://t.me/vaIerkaaaaaaa) для TP2
 
 ## Установка:
 1. Скачать API и положить в папку, чтобы на пути не было русских символов! Пример: `C:\TP2_Maps`
