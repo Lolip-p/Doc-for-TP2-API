@@ -38,7 +38,7 @@ encode_save_from_folder(prefs_folder_path, config.modified_path, encoding="utf-8
 - Добавление объектов или стен на уровень: `Level.add_object(self, obj)`, `Level.add_objects(self, objects)`, `Level.add_wall_segment(self, wall_segment)`, `Level.add_wall_segments(self, wall_segments)`
 - Конвертирует уровень в json файл (чтобы всё работало как надо)
 
-Нихера не понятно? Не ссать, вот пример кода с комментариями:
+Нихера не понятно? Не ссать, вот пример кода `map_editor.py` с комментариями:
 ```
 from tp2_save_api import *
 import config
@@ -52,12 +52,19 @@ level = Level()
 level.load_by_level_index(prefs_folder_path, 0, 1) # Вытаскиваем 1 уровень из пака карт 0
 
 #create lvl
-new_object = create_object("Start", position=Vector3(200, 200, 200), rotation=ObjectRotation.down())
+new_object = create_object("Finish", position=Vector3(200, 200, 200), rotation=ObjectRotation.down())
 level.add_object(new_object)
-level.add_objects([new_object, new_object])
 
 # convert
 level.convert_to_json_file(prefs_folder_path, 0, 1) # Записываем наши изменения в 1 уровень из пака карт 0
 
 encode_save_from_folder(prefs_folder_path, config.modified_path, encoding="utf-8") # Кодирует файл обратно, чтобы Unity схавал его.
 ```
+Этот код будет создавать объект `Finish` на координатах 200 200 200 (по x y z)
+
+## Загрузить обратно:
+1. После того как мы написали наш код `map_editor.py` мы его **запускаем**.
+2. В выходной папке (в моём случае это `map_mod`) должен появится наш изменённый файл `com.BFGGames.Teleportal2.v2.playerprefs.xml`
+3. Копируем его с заменой в папку с игрой на эмуляторе: `data\data\com.BFGGames.Teleportal2\shared_prefs`
+4. Заходим и радуемся!
+
