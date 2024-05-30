@@ -36,7 +36,7 @@ encode_save_from_folder(prefs_folder_path, config.modified_path, encoding="utf-8
 - Создаём экземпляр класса Level `level = Level()` и вызваем у него один из трёх методов: `load_from_string(level_string)`, `load_from_file(path)`, `load_by_level_index(playerprefs_folder, level_pack_index, level_index)`
 - Создание объектов или стен: `create_object(name, **kwargs)`, `create_wall(name, **kwargs)`, `name` - берётся из соответствующего словаря, `**kwargs` - это сами атрибуты объекта (позиция, поворот и т.д.)
 - Добавление объектов или стен на уровень: `Level.add_object(self, obj)`, `Level.add_objects(self, objects)`, `Level.add_wall_segment(self, wall_segment)`, `Level.add_wall_segments(self, wall_segments)`
-- Конвертирует уровень в json файл (чтобы всё работало как надо)
+- `level.convert_to_json_file(prefs_folder_path, 0, 1)` Конвертирует уровень в json файл (чтобы всё работало как надо)
 
 Нихера не понятно? Не ссать, вот пример кода `map_editor.py` с комментариями:
 ```python
